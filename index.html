@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy New Year Ammu❤️</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      text-align: center;
+      padding-top: 100px;
+      color: #333;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 320px;
+      margin: auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      animation: fadeIn 2s;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      background: #ff5f7e;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ff3f67;
+    }
+    #countdown {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>🎉 Happy New Year 🎉</h2>
+    <p>This little surprise is just for you Bangari💖</p>
+    <p>ಉಸಿರಂತೆ ನೀ ನನ್ನ ಬದುಕಾದೆ
+       ನೆರಳಂತೆ ನೀ ನನ್ನ ಜೊತೆಯಾದೆ
+       ಮುದ್ದು ಮನಸಲ್ಲಿ ನೀನು ಸದ್ಧೆ ಇಲ್ಲದೇ
+       ಸುದ್ದಿ ಮಾಡಿಹೋದೆ ನಲ್ಲೆ
+      ಎದೆ ಹಾಳೆ ಮೇಲೆ ಇರುವ ಪದದ ಸಾಲನ್ನು ನೀನಾಗಾಗಿ ಬರೆದೆ</p>
+    <div id="countdown"></div>
+    <button onclick="goNext()">Click here To Enter to My ❤️</button>
+  </div>
+
+  <script>
+    const targetDate = new Date("January 1, 2026 00:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+
+      countdownEl.innerHTML =
+        `⏳ ${days} days ${hours} hrs ${mins} mins to go`;
+    }, 1000);
+
+    function goNext() {
+      window.location.href = "letter.html";
+    }
+  </script>
+
+</body>
+</html>
