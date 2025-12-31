@@ -2,23 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy New Year Ammu❤️</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #ffdde1, #ee9ca7);
       text-align: center;
-      padding-top: 100px;
+      padding-top: 80px; /* slightly smaller for mobile */
       color: #333;
+      margin: 0;
     }
     .card {
       background: white;
       padding: 30px;
       border-radius: 15px;
-      width: 320px;
+      width: 90%;       /* responsive width */
+      max-width: 360px; /* ensures not too wide on desktop */
       margin: auto;
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
       animation: fadeIn 2s;
+      box-sizing: border-box; /* include padding in width */
     }
     button {
       margin-top: 20px;
@@ -40,6 +44,21 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 480px) {
+      body {
+        padding-top: 40px;
+      }
+      .card p {
+        font-size: 14px; /* slightly smaller text on small screens */
+        line-height: 1.6;
+      }
+      button {
+        width: 80%; /* full-width button on mobile */
+        padding: 12px 0;
+      }
     }
   </style>
 </head>
